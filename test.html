@@ -9,14 +9,15 @@
 </head>
 
 <body>
-    <p>the cookie associated whit this document is</p><span>aa</span>
+    <p></p>
+
     <script>
-        j('span').innerHTML = document.lastModified;
-
-
-        function j(ele) {
-            return document.querySelector(ele)
-        }
+        var str = '123456789';
+        var re = str.substring(0, 7);
+        var rr = str.substr(0, 7);
+        console.log(re);
+        console.log(rr);
+        console.log(str.substr(0, 5));
     </script>
 </body>
 
