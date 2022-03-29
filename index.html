@@ -6,18 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            background: pink;
-        }
-    </style>
 </head>
 
 <body>
-    <h2>我是一个网页</h2>
-    <p>我在另一个网页里打开</p>
+    <span>5</span> 自动返回首页
+    <button>返回首页</button>
 
+    <script>
+        window.onload = function() {
+            let n = 5;
+            setInterval(() => {
+                n--;
+                document.querySelector('span').innerHTML = n;
+                if (n === 0) {
+                    location.href = 'aaaa.html';
+                }
+            }, 1000);
 
+            document.querySelector('button').onclick = function() {
+                location.href = 'aaaa.html';
+            }
+        }
+    </script>
 </body>
 
 </html>
