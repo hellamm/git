@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+header,
+footer {
+    height: 60px;
+    color: #999;
+    text-align: center;
+    line-height: 60px;
+    background: black;
+}
+
+section.box {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 120px);
+    background: plum;
+}
+
+aside {
+    height: 100%;
+    background: pink;
+    flex: 300px;
+}
+
+article {
+    height: 100%;
+    background: paleturquoise;
+    flex: calc(100% - 300px);
+}

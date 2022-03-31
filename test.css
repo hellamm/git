@@ -59,13 +59,13 @@ li {
     width: calc(100%-200px);
     padding-left: 250px;
     height: 93%;
-    background: rgb(82, 138, 211);
+    background: rgb(199, 222, 252);
 }
 
 .rt iframe {
     position: absolute;
     right: 0;
-    width: 100%;
+    width: calc(100% - 200px);
     height: 93%;
     border: 2px solid red;
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 90%;
+            height: 150px;
+            background: pink;
+        }
+        
+        div {
+            margin-top: 10px;
+            width: 100px;
+            height: 60px;
+            background: paleturquoise;
+        }
+        
+        div:nth-child(1) {
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            flex: 0 1 60px;
+        }
+        
+        div:nth-child(2) {
+            flex: 3;
+        }
+        
+        div:nth-child(3) {
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            /* flex: flex-grow flex-shirnk flex-basis; */
+            flex: 0 1 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+
+</body>
+
+</html>
