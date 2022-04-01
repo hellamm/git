@@ -1,0 +1,148 @@
+.header {
+    height: 40px;
+    line-height: 40px;
+    color: #bbb;
+    background: #333;
+}
+
+.container {
+    width: 1226px;
+    height: 40px;
+    margin: 0 auto;
+    /* background: pink; */
+}
+
+.container a {
+    padding-right: 6px;
+    color: #bbb;
+}
+
+.container a:hover {
+    color: #fff;
+}
+
+.top-nav {
+    position: relative;
+    float: left;
+}
+
+.top-nav a::after {
+    content: '';
+    display: inline-block;
+    margin-left: 8px;
+    width: 1px;
+    height: 10px;
+    background: #555;
+}
+
+.top-nav a:last-child::after {
+    width: 0;
+}
+
+
+/* 导航条导航结束 */
+
+.top-info,
+.top-cart {
+    float: right;
+}
+
+.top-info {
+    margin-right: 20px;
+}
+
+.top-info span {
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin: 0 6px 0 0;
+    background: #555;
+}
+
+
+/* appcode */
+
+.appcode {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    width: 120px;
+    height: 150px;
+    padding: 15px 10px;
+    background: #fff;
+    line-height: 18px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgb(212, 212, 212);
+}
+
+.appcode img {
+    width: 100%;
+}
+
+.appcode e {
+    display: inline-block;
+}
+
+.appcode::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+
+.appbox:hover .appcode {
+    display: block;
+}
+
+
+/* 登录注册结束 */
+
+.top-cart {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background: rgb(73, 73, 73);
+    text-align: center;
+    cursor: pointer;
+}
+
+.top-cart span:first-child {
+    font-family: 'icomoon';
+    vertical-align: middle;
+}
+
+.cat-box {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 290px;
+    height: 80px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.cat-box p {
+    margin-top: 18px;
+    color: #333;
+}
+
+.top-cart:hover {
+    color: #333;
+    background: #fff;
+    box-shadow: 0 4px 6px 0 #333;
+}
+
+.top-cart:hover .cat-box {
+    display: block;
+    box-shadow: 0 4px 6px 0 #bbb;
+}
+
+
+/* 购物车结束 */

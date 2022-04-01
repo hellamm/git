@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {
+            width: 100%;
+            height: 41px;
+            background: #333;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            padding: 10px 20px;
+            color: aliceblue;
+            text-decoration: none;
+            display: block;
+            background: #333;
+        }
+        
+        .nav_box {
+            float: left;
+            width: 120px;
+            text-align: center;
+            background: pink;
+        }
+        
+        .down {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .down ul {
+            background: rgb(231, 231, 231);
+        }
+        
+        .down ul li {
+            padding: 10px 0;
+        }
+        /* .nav_box a:hover {
+            background: red;
+        }
+        
+        .nav_box:hover .down {
+            display: block;
+        } */
+        
+        .active {
+            background: red;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_box">
+            <a class="info" href="#">个人中心</a>
+            <div class="down">
+                <ul>
+                    <li>列表一</li>
+                    <li>列表二</li>
+                    <li>列表三</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="nav_box">
+            <a class="info" href="#">个人中心</a>
+            <div class="down">
+                <ul>
+                    <li>列表一</li>
+                    <li>列表二</li>
+                    <li>列表三</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="nav_box">
+            <a class="info" href="#">个人中心</a>
+            <div class="down">
+                <ul>
+                    <li>列表一</li>
+                    <li>列表二</li>
+                    <li>列表三</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <script>
+        const navBox = document.querySelectorAll('.nav_box');
+        for (let i = 0; i < navBox.length; i++) {
+            navBox[i].addEventListener('mouseover', function() {
+                for (let i = 0; i < navBox.length; i++) {
+                    navBox[i].children[0].classList.remove('active')
+                    navBox[i].children[1].style.display = 'none';
+                }
+                this.children[0].classList.add("active")
+                this.children[1].style.display = 'block';
+            })
+
+            navBox[i].addEventListener('mouseout', function() {
+                this.children[1].style.display = 'none';
+                this.children[0].classList.remove("active")
+            })
+        }
+
+        // 下拉框事件
+        const lis = document.querySelectorAll('.down li');
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].addEventListener('mouseover', function() {
+                for (let i = 0; i < lis.length; i++) {
+                    lis[i].classList.remove('active');
+                }
+
+                this.classList.add('active')
+            })
+        }
+    </script>
+
+</body>
+
+</html>

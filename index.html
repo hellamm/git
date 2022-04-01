@@ -5,29 +5,363 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>小米商城</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?hmru7b');
+            src: url('fonts/icomoon.eot?hmru7b#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?hmru7b') format('truetype'), url('fonts/icomoon.woff?hmru7b') format('woff'), url('fonts/icomoon.svg?hmru7b#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+    </style>
 </head>
 
 <body>
-    <span>5</span> 自动返回首页
-    <button>返回首页</button>
+    <!-- 导航 -->
+    <div class="header">
+        <div class="container">
+            <!-- 顶部左边导航 -->
+            <div class="top-nav">
+                <a href="#">小米商城</a>
+                <a href="#">MIUI</a>
+                <a href="#">loT</a>
+                <a href="#">云服务</a>
+                <a href="#">天星数科</a>
+                <a href="#">有品</a>
+                <a href="#">小爱开放平台</a>
+                <a href="#">企业团购</a>
+                <a href="#">资质证照</a>
+                <a href="#">协议规则</a>
+                <a class="appbox" href="#">
+                    <span>下载app</span>
+                    <span class="appcode">
+                       
+                        <img src="img/ewm.png" alt="">
+                        <e>小米APP商城</e>
+                      
+                    </span>
+                </a>
+                <a href="#">Select Location</a>
+            </div>
+            <!-- 购物车 -->
+            <div class="top-cart">
+                <span></span>
+                <span>购物车</span>
+                <span>(0)</span>
+                <div class="cat-box">
+                    <p> 购物车中还没有商品，赶紧选购吧！</p>
 
-    <script>
-        window.onload = function() {
-            let n = 5;
-            setInterval(() => {
-                n--;
-                document.querySelector('span').innerHTML = n;
-                if (n === 0) {
-                    location.href = 'aaaa.html';
-                }
-            }, 1000);
+                </div>
+            </div>
+            <!-- 登陆注册 -->
+            <div class="top-info">
+                <a href="#">登陆</a>
+                <span></span>
+                <a href="#">注册</a>
+                <span></span>
+                <a href="#">消息通知</a>
+            </div>
 
-            document.querySelector('button').onclick = function() {
-                location.href = 'aaaa.html';
-            }
-        }
-    </script>
+
+        </div>
+        <!-- 导航搜索栏 -->
+        <div class="site-box">
+            <div class="site-nav">
+                <div class="nav-log">
+                    <a title="小米官网" href="">小米商城</a>
+                </div>
+                <div class="nav-list">
+                    <a href="#">Xiaomi手机</a>
+                    <a href="#">Red红米</a>
+                    <a href="#">电视</a>
+                    <a href="#">笔记本</a>
+                    <a href="#">平板</a>
+                    <a href="#">家电</a>
+                    <a href="#">路由器</a>
+                    <a href="#">服务</a>
+                    <a href="#">社区</a>
+                </div>
+                <div class="nav-search">
+                    <form>
+                        <input placeholder="请输入您要搜索的内容" type="text">
+                        <span></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="banner-box">
+        <!-- 轮播图片 -->
+        <ul class="banner-ul">
+            <li>
+                <a href="#">
+                    <img src="upload/banner-1.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="upload/banner-2.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="upload/banner-3.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="upload/banner-4.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="upload/banner-5.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+        <!-- 轮播小圆点 -->
+        <ul class="banner-circle">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!-- 菜单列表 -->
+        <ul class="banner-list">
+            <li class="ls-active">手机</li>
+            <li>电视</li>
+            <li>笔记本 平板</li>
+            <li>家电</li>
+            <li>出行 穿戴</li>
+            <li>智能 路由器</li>
+            <li>电源 配件</li>
+            <li>健康 儿童</li>
+            <li>耳机 音箱</li>
+            <li>生活 箱包</li>
+        </ul>
+        <!-- 箭头按钮 -->
+        <div class="btn-lt"></div>
+        <div class="btn-rt"></div>
+    </div>
+    <!-- banner small -->
+    <div class="bn-small">
+        <div class="bn-vip">
+            <ul>
+                <li>
+                    <span></span>
+                    <span>保障服务</span>
+                </li>
+                <li>
+                    <span></span>
+                    <span>企业团购</span>
+                </li>
+                <li>
+                    <span></span>
+                    <span>米粉卡</span>
+                </li>
+                <li>
+                    <span></span>
+                    <span>以旧换新</span>
+                </li>
+                <li>
+                    <span></span>
+                    <span>话费充值</span>
+                </li>
+                <li>
+                    <span></span>
+                    <span>快速通道</span>
+                </li>
+            </ul>
+
+        </div>
+        <div class="bn-list">
+            <a href="#"> <img src="upload/bn1.jpg" alt=""></a>
+        </div>
+        <div class="bn-list">
+            <a href="#"> <img src="upload/bn2.jpg" alt=""></a>
+
+        </div>
+        <div class="bn-list">
+            <a href="#"> <img src="upload/bn3.jpg" alt=""></a>
+        </div>
+    </div>
+    <!-- banner small -->
+    <div class="home-bn-box">
+        <a href="#">
+            <img src="upload/bb.webp.jpg" alt="">
+        </a>
+    </div>
+
+    <!-- 产品模块1 -->
+    <div class="cp-box">
+        <div class="cp-header">
+            <h2>手机</h2>
+            <div>
+                <span>查看更多</span>
+                <span><i></i></span>
+            </div>
+        </div>
+        <div class="cp-list">
+            <div class="cp-list-lt">
+                <a href="#">
+                    <img src="upload/list.png" alt="">
+                </a>
+            </div>
+
+            <div class="cp-list-rt">
+                <div class="cp-info">
+                    <img src="upload/1.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>大电量、大音量、大屏幕</p>
+                    <p>649元 <span>699元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/8.jpg" alt="">
+                    <h3>Redmi K50 Pro</h3>
+                    <p>2K直屏的狠旗舰</p>
+                    <p>1649元 <span>1699元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/2.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>2K直屏的狠旗舰</p>
+                    <p>999元 <span>1233元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/3.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>口碑真旗舰</p>
+                    <p>2349元 <span>2599元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/4.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>全线拉满的冷血旗舰</p>
+                    <p>1999元 <span>2000元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/5.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>全新骁龙8｜2K AMOLED屏幕</p>
+                    <p>3249元 <span>3800元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/6.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>全新骁龙8｜5000万主摄</p>
+                    <p>3649元 <span>4555元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/7.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>骁龙870｜5000万主摄</p>
+                    <p>2999元 <span>3619元</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 产品模块2 -->
+    <div class="cp-box">
+        <div class="cp-header">
+            <h2>手机</h2>
+            <div>
+                <span>查看更多</span>
+                <span><i></i></span>
+            </div>
+        </div>
+        <div class="cp-list">
+            <div class="cp-list-lt">
+                <a href="#">
+                    <img src="upload/list.png" alt="">
+                </a>
+            </div>
+
+            <div class="cp-list-rt">
+                <div class="cp-info">
+                    <img src="upload/1.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>大电量、大音量、大屏幕</p>
+                    <p>649元 <span>699元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/8.jpg" alt="">
+                    <h3>Redmi K50 Pro</h3>
+                    <p>2K直屏的狠旗舰</p>
+                    <p>1649元 <span>1699元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/2.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>2K直屏的狠旗舰</p>
+                    <p>999元 <span>1233元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/3.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>口碑真旗舰</p>
+                    <p>2349元 <span>2599元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/4.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>全线拉满的冷血旗舰</p>
+                    <p>1999元 <span>2000元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/5.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>全新骁龙8｜2K AMOLED屏幕</p>
+                    <p>3249元 <span>3800元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/6.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>全新骁龙8｜5000万主摄</p>
+                    <p>3649元 <span>4555元</span></p>
+                </div>
+                <div class="cp-info">
+                    <img src="upload/7.jpg" alt="">
+                    <h3>Redmi 10A</h3>
+                    <p>骁龙870｜5000万主摄</p>
+                    <p>2999元 <span>3619元</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="server-info">
+        <a href="#">
+            <span></span>
+            <span>手机App</span>
+        </a>
+        <a href="#">
+            <span></span>
+            <span>个人中心</span>
+        </a>
+        <a href="#">
+            <span></span>
+            <span>售后服务</span>
+        </a>
+        <a href="#">
+            <span></span>
+            <span>人工服务</span>
+        </a>
+        <a href="#">
+            <span></span>
+            <span>购物车</span>
+        </a>
+    </div>
+
+
+    <div class="foot"></div>
+
 </body>
 
 </html>
