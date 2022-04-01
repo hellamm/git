@@ -150,7 +150,7 @@
             }
             
             .site-nav {
-                overflow: hidden;
+                /* overflow: hidden; */
                 margin: 0 auto;
                 width: 1226px;
                 font-size: 16px;
@@ -198,9 +198,11 @@
             .nav-list a:hover {
                 color: rgb(255, 123, 0);
             }
+            /* 搜索开始 */
             
             .nav-search {
-                overflow: hidden;
+                /* overflow: hidden; */
+                position: relative;
                 width: 300px;
                 height: 50px;
                 margin: 26px 40px 0 0;
@@ -220,20 +222,43 @@
                 float: right;
                 text-align: center;
                 width: 50px;
-                height: 51px;
+                height: 49px;
                 padding: 5px 0 0 4px;
                 font-family: 'icomoon';
                 font-size: 28px;
                 vertical-align: top;
-                border-left: 1px solid rgb(185, 184, 184);
+                border-left: 1px solid #b9b8b8;
+            }
+            
+            .search-hd {
+                display: none;
+                position: absolute;
+                top: 49px;
+                left: -1px;
+                width: 250px;
+                font-size: 12.5px;
+                line-height: 2.5;
+                color: #777;
+                background: #fff;
+                z-index: 1;
+                border: 1px solid #ff7b00;
+                border-top: none;
+            }
+            
+            .search-hd ul li {
+                padding: 0 20px;
+            }
+            
+            .search-hd ul li:hover {
+                background: #f5f3f3;
             }
             
             .nav-search:hover {
-                border: 1px solid rgb(255, 123, 0);
+                border: 1px solid #ff7b00;
             }
             
             .nav-search:hover span {
-                border-left: 1px solid rgb(255, 123, 0);
+                border-left: 1px solid #ff7b00;
                 color: rgb(255, 123, 0);
             }
             
@@ -526,23 +551,17 @@
                 width: 160px;
                 height: 160px;
             }
-            
-            .foot {
-                height: 300px;
-                margin: 20px auto 0;
-                background: #fff;
-            }
+            /* 固定侧边栏开始 */
             
             .server-info {
                 overflow: hidden;
-                position: absolute;
-                top: 200px;
+                position: fixed;
+                top: 170px;
                 right: 0;
                 width: 84px;
-                height: 450px;
+                /* height: 450px; */
                 font-family: 'icomoon';
                 text-align: center;
-                background: #fff;
                 border: 1px solid #eee;
             }
             
@@ -552,12 +571,38 @@
                 justify-content: center;
                 align-items: center;
                 width: 84px;
-                height: 90px;
+                height: 85px;
                 color: #929292;
+                background: #fff;
                 border-bottom: 1px solid #eee;
             }
             
             .server-info a span:first-child {
                 font-size: 20px;
                 margin-bottom: 12px;
+            }
+            
+            .server-info .totop {
+                padding: 18px 0;
+                display: none;
+                margin-top: 8px;
+            }
+            
+            .totop .rta {
+                font-size: 18px;
+                transform: rotateZ(-90deg);
+            }
+            /* foot */
+            
+            .foot {
+                height: 230px;
+                margin: 20px auto 0;
+                padding: 40px;
+                text-align: center;
+                color: #888;
+                background: #fff;
+            }
+            
+            .foot p {
+                line-height: 2;
             }
