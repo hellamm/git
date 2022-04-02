@@ -71,6 +71,7 @@
                 text-align: center;
                 box-shadow: 0 2px 5px 0 rgb(212, 212, 212);
                 transition: all .8s;
+                z-index: 2;
             }
             
             .appcode img {
@@ -123,6 +124,7 @@
                 cursor: pointer;
                 background: #fff;
                 transition: all 1s;
+                z-index: 3;
             }
             
             .cat-box p {
@@ -188,11 +190,12 @@
             
             .nav-list {
                 margin-left: 120px;
+                margin-top: 28px;
             }
             
             .nav-list a {
                 display: inline-block;
-                padding: 28px 8px 38px;
+                padding: 0 8px;
             }
             
             .nav-list a:hover {
@@ -264,7 +267,7 @@
             
             .nav-search span:hover {
                 background: rgb(255, 123, 0);
-                color: #fff;
+                color: rgb(255, 255, 255);
             }
             /* 整个导航栏结束 */
             
